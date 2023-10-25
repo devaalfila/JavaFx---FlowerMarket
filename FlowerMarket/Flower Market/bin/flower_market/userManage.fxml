@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fteam_market.UserManage">
+   <children>
+      <BorderPane layoutX="-7.0" layoutY="-1.0" prefHeight="566.0" prefWidth="851.0">
+         <center>
+            <Pane prefHeight="414.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableUser" layoutX="7.0" prefHeight="540.0" prefWidth="553.0">
+                    <columns>
+                      <TableColumn fx:id="userID" text="User ID" />
+                      <TableColumn fx:id="username" prefWidth="134.0" text="Username" />
+                        <TableColumn fx:id="password" prefWidth="122.0" text="Password" />
+                        <TableColumn fx:id="email" prefWidth="88.0" text="Email" />
+                        <TableColumn fx:id="phoneNumber" prefWidth="128.0" text="Phone Number" />
+                        <TableColumn fx:id="age" prefWidth="128.0" text="Age" />
+                        <TableColumn fx:id="gender" prefWidth="128.0" text="Gender" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="574.0" layoutY="51.0" text="User ID" />
+                  <Label layoutX="574.0" layoutY="89.0" text="Username" />
+                  <Label layoutX="576.0" layoutY="126.0" text="Password" />
+                  <TextField fx:id="tf_userID" editable="false" layoutX="662.0" layoutY="47.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="tf_username" editable="false" layoutX="662.0" layoutY="85.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="tf_password" editable="false" layoutX="662.0" layoutY="122.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="tf_maxstock" layoutX="640.0" layoutY="258.0" visible="false" />
+                  <RadioButton fx:id="male" layoutX="662.0" layoutY="275.0" mnemonicParsing="false" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="type" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="female" layoutX="730.0" layoutY="275.0" mnemonicParsing="false" text="Female" toggleGroup="$type" />
+                  <Label layoutX="574.0" layoutY="275.0" text="Gender" />
+                  <Button fx:id="btn_update" layoutX="577.0" layoutY="327.0" mnemonicParsing="false" onAction="#UpdateUser" prefHeight="25.0" prefWidth="124.0" text="Update User" />
+                  <Button fx:id="btn_delete" layoutX="714.0" layoutY="327.0" mnemonicParsing="false" onAction="#DeleteUser" prefHeight="25.0" prefWidth="114.0" text="Delete User" />
+                  <Label layoutX="576.0" layoutY="162.0" text="Email" />
+                  <TextField fx:id="tf_email" layoutX="662.0" layoutY="158.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="tf_phoneNumber" layoutX="662.0" layoutY="195.0" prefHeight="25.0" prefWidth="176.0" />
+                  <Label layoutX="576.0" layoutY="199.0" text="Phone Number" />
+                  <Label layoutX="579.0" layoutY="237.0" text="Age" />
+                  <Spinner fx:id="sp_age" layoutX="662.0" layoutY="233.0" prefHeight="25.0" prefWidth="175.0" />
+               </children>
+            </Pane>
+         </center>
+         <top>
+            <MenuBar fx:id="menuBar" prefHeight="27.0" prefWidth="483.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu fx:id="menuUser" mnemonicParsing="false" text="Menu">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Manage User" />
+                        <MenuItem mnemonicParsing="false" onAction="#ItemManage" text="Manage Item" />
+                        <MenuItem mnemonicParsing="false" onAction="#Transaction" text="Transaction" />
+                        <MenuItem mnemonicParsing="false" onAction="#Logout" text="Log out" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

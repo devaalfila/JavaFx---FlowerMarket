@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fteam_market.CartForm">
+   <children>
+      <BorderPane layoutX="-7.0" layoutY="-1.0" prefHeight="566.0" prefWidth="851.0">
+         <center>
+            <Pane prefHeight="414.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableCart" layoutX="7.0" prefHeight="418.0" prefWidth="845.0">
+                    <columns>
+                      <TableColumn fx:id="itemID" prefWidth="88.0" text="Item ID" />
+                      <TableColumn fx:id="itemName" prefWidth="184.0" text="Item Name" />
+                        <TableColumn fx:id="itemDescription" prefWidth="175.0" text="Item Description" />
+                        <TableColumn fx:id="itemPrice" prefWidth="147.0" text="Price" />
+                        <TableColumn fx:id="itemQuantity" prefWidth="113.0" text="Quantity" />
+                        <TableColumn fx:id="totalPrice" prefWidth="137.0" text="Total Price" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="tf_maxstock" layoutX="640.0" layoutY="258.0" visible="false" />
+                  <Button fx:id="btn_remove" disable="true" layoutX="315.0" layoutY="479.0" mnemonicParsing="false" onAction="#removeFromCart" text="Remove From Cart" />
+                  <Button fx:id="btn_checkout" layoutX="440.0" layoutY="479.0" mnemonicParsing="false" onAction="#Checkout" text="Checkout" />
+               </children>
+            </Pane>
+         </center>
+         <top>
+            <MenuBar fx:id="menuBar" prefHeight="27.0" prefWidth="483.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu fx:id="menuUser" mnemonicParsing="false" text="Menu">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ItemMarket" text="Item Market" />
+                        <MenuItem mnemonicParsing="false" text="Cart Item" />
+                        <MenuItem mnemonicParsing="false" onAction="#TransactionHistory" text="Transaction History" />
+                        <MenuItem mnemonicParsing="false" onAction="#Logout" text="Log out" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

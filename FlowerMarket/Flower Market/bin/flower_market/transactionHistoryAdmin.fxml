@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fteam_market.TransactionFormAdmin">
+   <children>
+      <BorderPane layoutX="-7.0" layoutY="-1.0" prefHeight="566.0" prefWidth="851.0">
+         <center>
+            <Pane prefHeight="414.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableTransaction" layoutX="7.0" prefHeight="539.0" prefWidth="845.0">
+                    <columns>
+                      <TableColumn fx:id="transactionID" prefWidth="111.0" text="Transaction ID" />
+                      <TableColumn fx:id="buyer" prefWidth="118.0" text="Buyer" />
+                        <TableColumn fx:id="itemName" prefWidth="166.0" text="Item Name" />
+                        <TableColumn fx:id="itemDescription" prefWidth="165.0" text="Item Description" />
+                        <TableColumn fx:id="itemPrice" prefWidth="138.0" text="Price" />
+                        <TableColumn fx:id="itemQuantity" prefWidth="145.0" text="Quantity" />
+                        <TableColumn fx:id="totalPrice" prefWidth="145.0" text="Total Price" />
+                        <TableColumn fx:id="transactionDate" prefWidth="145.0" text="Transaction Date" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="tf_maxstock" layoutX="640.0" layoutY="258.0" visible="false" />
+               </children>
+            </Pane>
+         </center>
+         <top>
+            <MenuBar fx:id="menuBar" prefHeight="27.0" prefWidth="483.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu fx:id="menuUser" mnemonicParsing="false" text="Menu">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ManageUser" text="Manage User" />
+                        <MenuItem mnemonicParsing="false" onAction="#ManageItem" text="Manage Item" />
+                        <MenuItem mnemonicParsing="false" onAction="#TransactionHistory" text="Transaction" />
+                        <MenuItem mnemonicParsing="false" onAction="#Logout" text="Log out" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

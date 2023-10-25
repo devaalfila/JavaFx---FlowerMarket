@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fteam_market.Landing">
+   <children>
+      <BorderPane layoutX="-7.0" layoutY="-1.0" prefHeight="441.0" prefWidth="608.0">
+         <center>
+            <Pane prefHeight="414.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="label_name" layoutX="209.0" layoutY="190.0" text="Welcome [Name]" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </center>
+         <top>
+            <MenuBar fx:id="menuBar" prefHeight="27.0" prefWidth="483.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu fx:id="menuUser" mnemonicParsing="false" text="Menu">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ItemMarket" text="Item Market" />
+                        <MenuItem mnemonicParsing="false" onAction="#CartForm" text="Cart Item" />
+                        <MenuItem mnemonicParsing="false" onAction="#TransactionHistory" text="Transaction History" />
+                        <MenuItem mnemonicParsing="false" onAction="#Logout" text="Log out" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="menuAdmin" mnemonicParsing="false" text="Menu">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#UserManage" text="Manage User" />
+                        <MenuItem mnemonicParsing="false" onAction="#ManageItem" text="Manage Item" />
+                        <MenuItem mnemonicParsing="false" onAction="#TransactionHistory" text="Transaction" />
+                        <MenuItem mnemonicParsing="false" onAction="#Logout" text="Log out" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

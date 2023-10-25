@@ -1,0 +1,1 @@
+Untuk cara installnya sama seperti install mysql_connector_java dengan add external jar di build path package nya
